@@ -1,0 +1,672 @@
+
+*** Running vivado
+    with args -log zybo_secure_control_unit_v2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zybo_secure_control_unit_v2.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source zybo_secure_control_unit_v2.tcl -notrace
+Command: synth_design -top zybo_secure_control_unit_v2 -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1080
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1082.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'zybo_secure_control_unit_v2' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/zybo_secure_control_unit_v2.sv:16]
+	Parameter SYS_CLK_FREQ bound to: 125000000 - type: integer 
+	Parameter SPI_CLK_FREQ bound to: 100000 - type: integer 
+	Parameter UART_BAUD_RATE bound to: 115200 - type: integer 
+	Parameter MASTER_KEY bound to: 128'b01101100100011101001110011110101011100001001001100101011110101011010001111110001000001001101011110111000100111100110001011000001 
+	Parameter SPI_CLK_DIV bound to: 625 - type: integer 
+	Parameter TYPE_PC_TX bound to: 8'b00000010 
+	Parameter TYPE_PC_RX bound to: 8'b00000011 
+	Parameter TYPE_BASYS_TX bound to: 8'b00000100 
+	Parameter TYPE_BASYS_RX bound to: 8'b00000101 
+	Parameter TYPE_JETSON_RX bound to: 8'b00000001 
+	Parameter TYPE_JETSON_TX bound to: 8'b00000110 
+	Parameter TYPE_JETSON_KEY_CONFIRM bound to: 8'b00110110 
+	Parameter TYPE_JETSON_CONFIRM_ACK bound to: 8'b00110111 
+	Parameter SRC_PC bound to: 2'b00 
+	Parameter SRC_BASYS bound to: 2'b01 
+	Parameter SRC_JETSON bound to: 2'b10 
+	Parameter DST_PC bound to: 2'b00 
+	Parameter DST_BASYS bound to: 2'b01 
+	Parameter DST_JETSON bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/zybo_secure_control_unit_v2.sv:109]
+INFO: [Synth 8-226] default block is never used [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/zybo_secure_control_unit_v2.sv:148]
+INFO: [Synth 8-6157] synthesizing module 'zybo_session_manager' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/zybo_session_manager.sv:14]
+	Parameter SYS_CLK_FREQ bound to: 125000000 - type: integer 
+	Parameter SESSION_SECONDS bound to: 30 - type: integer 
+	Parameter MASTER_KEY bound to: 128'b01101100100011101001110011110101011100001001001100101011110101011010001111110001000001001101011110111000100111100110001011000001 
+	Parameter LFSR_SEED bound to: 128'b10100011110001010001100111100111010000101101100010110110000011110001001101010111100110111101111100100100011010001010110011100001 
+	Parameter DST_PC bound to: 2'b00 
+	Parameter DST_BASYS bound to: 2'b01 
+	Parameter DST_JETSON bound to: 2'b10 
+	Parameter PC_KEY_UPDATE bound to: 8'b00010010 
+	Parameter PC_READY bound to: 8'b00010011 
+	Parameter PC_KEY_COMMIT bound to: 8'b00010100 
+	Parameter PC_COMMIT_ACK bound to: 8'b00010101 
+	Parameter PC_KEY_CONFIRM bound to: 8'b00010110 
+	Parameter PC_CONFIRM_ACK bound to: 8'b00010111 
+	Parameter BASYS_KEY_UPDATE bound to: 8'b00100010 
+	Parameter BASYS_READY bound to: 8'b00100011 
+	Parameter BASYS_POLL_OLD bound to: 8'b00100100 
+	Parameter BASYS_KEY_COMMIT bound to: 8'b00100101 
+	Parameter BASYS_COMMIT_ACK bound to: 8'b00100110 
+	Parameter BASYS_KEY_CONFIRM bound to: 8'b00100111 
+	Parameter BASYS_CONFIRM_ACK bound to: 8'b00101000 
+	Parameter BASYS_POLL_NEW bound to: 8'b00101001 
+	Parameter JETSON_KEY_UPDATE bound to: 8'b00110010 
+	Parameter JETSON_READY bound to: 8'b00110011 
+	Parameter JETSON_KEY_COMMIT bound to: 8'b00110100 
+	Parameter JETSON_COMMIT_ACK bound to: 8'b00110101 
+	Parameter JETSON_KEY_CONFIRM bound to: 8'b00110110 
+	Parameter JETSON_CONFIRM_ACK bound to: 8'b00110111 
+	Parameter JETSON_CHALLENGE_CONST bound to: 128'b01011010010110100101101001011010010110100101101001011010010110101010010110100101101001011010010110100101101001011010010110100101 
+	Parameter JETSON_RESPONSE_CONST bound to: 128'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 
+	Parameter RETRY_CYCLES bound to: 2500000 - type: integer 
+	Parameter SECOND_W bound to: 27 - type: integer 
+	Parameter ELAPSED_W bound to: 5 - type: integer 
+	Parameter RETRY_W bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'zybo_session_manager' (1#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/zybo_session_manager.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'spi_slave' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_slave.sv:4]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000110000000 
+	Parameter CPOL bound to: 1'b0 
+	Parameter CPHA bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spi_slave' (2#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_slave.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'pxc_sync_fifo' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/pxc_sync_fifo.sv:1]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000010000000 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000100 
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'pxc_sync_fifo' (3#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/pxc_sync_fifo.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/uart_rx.sv:3]
+	Parameter CLK_FREQ bound to: 125000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLK_PER_BIT bound to: 1085 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/uart_rx.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (4#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/uart_rx.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'secure_uart_frame_rx' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/secure_uart_frame_rx.sv:5]
+INFO: [Synth 8-226] default block is never used [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/secure_uart_frame_rx.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'secure_uart_frame_rx' (5#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/secure_uart_frame_rx.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'spi_master' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_master.sv:4]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000110000000 
+	Parameter CPOL bound to: 1'b0 
+	Parameter CPHA bound to: 1'b0 
+	Parameter CLK_DIV bound to: 625 - type: integer 
+	Parameter HALF bound to: 625 - type: integer 
+	Parameter TOTAL_EDGES bound to: 32'sb00000000000000000000001100000000 
+INFO: [Synth 8-6155] done synthesizing module 'spi_master' (6#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_master.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'aes_gcm_decrypt_packet' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/aes_gcm_decrypt_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_decrypt_ip' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_decrypt_ip.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_key_schedule' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_key_schedule.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_key_schedule' (7#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_key_schedule.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_decrypt_block' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_decrypt_block.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_encrypt_block' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_encrypt_block.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_pipelined_encrypt_core' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_pipelined_encrypt_core.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_round' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_encrypt_round.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_sub_bytes' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_sub_bytes' (8#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_shift_rows' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_shift_rows' (9#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_mix_columns' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_mix_columns' (10#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_add_round_key' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_add_round_key.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_add_round_key' (11#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_add_round_key.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_round' (12#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_encrypt_round.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_pipelined_encrypt_core' (13#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_pipelined_encrypt_core.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_encrypt_block' (14#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_encrypt_block.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_gcm_ghash' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_gcm_ghash.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_gcm_ghash' (15#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_gcm_ghash.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_decrypt_block' (16#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_decrypt_block.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_decrypt_ip' (17#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_decrypt_ip.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_gcm_decrypt_packet' (18#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/aes_gcm_decrypt_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'aes_gcm_encrypt_packet' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/aes_gcm_encrypt_packet.sv:5]
+	Parameter FRAME_MAGIC bound to: 16'b1010010101011010 
+	Parameter FRAME_LENGTH bound to: 8'b00010000 
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_encrypt_ip' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_encrypt_ip.sv:1]
+	Parameter BOARD_ID bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_encrypt_block' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_encrypt_block.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_encrypt_block' (19#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_encrypt_block.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_encrypt_ip' (20#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_gcm_encrypt_ip.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_gcm_encrypt_packet' (21#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/aes_gcm_encrypt_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'secure_uart_frame_tx' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/secure_uart_frame_tx.sv:4]
+	Parameter CLK_FREQ bound to: 125000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/uart_tx.sv:3]
+	Parameter CLK_FREQ bound to: 125000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLK_PER_BIT bound to: 1085 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/uart_tx.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (22#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/legacy/uart_tx.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'secure_uart_frame_tx' (23#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/secure_uart_frame_tx.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'zybo_secure_control_unit_v2' (24#1) [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/secure/zybo_secure_control_unit_v2.sv:16]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.973 ; gain = 45.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.973 ; gain = 45.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.973 ; gain = 45.301
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1190.477 ; gain = 9.434
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/260805_AIGIS_inseok/zyboproject_inseok/constraints/zybo_secure.xdc]
+Finished Parsing XDC File [D:/260805_AIGIS_inseok/zyboproject_inseok/constraints/zybo_secure.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/260805_AIGIS_inseok/zyboproject_inseok/constraints/zybo_secure.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zybo_secure_control_unit_v2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zybo_secure_control_unit_v2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1574.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1574.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'group_state_reg' in module 'zybo_session_manager'
+INFO: [Synth 8-802] inferred FSM for state register 'jetson_state_reg' in module 'zybo_session_manager'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'aes128_gcm_decrypt_block'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'aes128_gcm_encrypt_block'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'secure_uart_frame_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'key_state_reg' in module 'zybo_secure_control_unit_v2'
+INFO: [Synth 8-802] inferred FSM for state register 'jetson_key_state_reg' in module 'zybo_secure_control_unit_v2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            J_WAIT_EPOCH |                             0000 |                             0000
+           J_SEND_UPDATE |                             0001 |                             0001
+            J_WAIT_READY |                             0010 |                             0010
+           J_SEND_COMMIT |                             0011 |                             0011
+       J_WAIT_COMMIT_ACK |                             0100 |                             0100
+          J_SWITCH_LOCAL |                             0101 |                             0101
+        J_WAIT_LOCAL_KEY |                             0110 |                             0110
+          J_SEND_CONFIRM |                             0111 |                             0111
+      J_WAIT_CONFIRM_ACK |                             1000 |                             1000
+                   J_RUN |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'jetson_state_reg' using encoding 'sequential' in module 'zybo_session_manager'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  G_BOOT |              0000000000000000001 |                            00000
+        G_SEND_PC_UPDATE |              0000000000000000010 |                            00010
+         G_WAIT_PC_READY |              0000000000000000100 |                            00011
+     G_SEND_BASYS_UPDATE |              0000000000000001000 |                            00100
+      G_WAIT_BASYS_READY |              0000000000000010000 |                            00101
+        G_SEND_PC_COMMIT |              0000000000000100000 |                            00111
+    G_WAIT_PC_COMMIT_ACK |              0000000000001000000 |                            01000
+     G_SEND_BASYS_COMMIT |              0000000000010000000 |                            01001
+ G_WAIT_BASYS_COMMIT_ACK |              0000000000100000000 |                            01010
+          G_SWITCH_LOCAL |              0000000001000000000 |                            01100
+        G_WAIT_LOCAL_KEY |              0000000010000000000 |                            01101
+       G_SEND_PC_CONFIRM |              0000000100000000000 |                            01110
+   G_WAIT_PC_CONFIRM_ACK |              0000001000000000000 |                            01111
+    G_SEND_BASYS_CONFIRM |              0000010000000000000 |                            10000
+G_WAIT_BASYS_CONFIRM_ACK |              0000100000000000000 |                            10001
+                   G_RUN |              0001000000000000000 |                            00001
+   G_SEND_BASYS_POLL_NEW |              0010000000000000000 |                            10010
+G_SEND_BASYS_POLL_OLD_COMMIT |              0100000000000000000 |                            01011
+G_SEND_BASYS_POLL_OLD_READY |              1000000000000000000 |                            00110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'group_state_reg' using encoding 'one-hot' in module 'zybo_session_manager'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              001 |                               00
+                  S_XFER |                              010 |                               01
+                  S_TAIL |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'spi_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+             HASH_SUBMIT |                       0000000010 |                             0001
+               HASH_WAIT |                       0000000100 |                             0010
+             MASK_SUBMIT |                       0000001000 |                             0011
+               MASK_WAIT |                       0000010000 |                             0100
+           STREAM_SUBMIT |                       0000100000 |                             0101
+             STREAM_WAIT |                       0001000000 |                             0110
+            GHASH_SUBMIT |                       0010000000 |                             0111
+              GHASH_WAIT |                       0100000000 |                             1000
+                  RESULT |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'aes128_gcm_decrypt_block'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+             HASH_SUBMIT |                       0000000010 |                             0001
+               HASH_WAIT |                       0000000100 |                             0010
+             MASK_SUBMIT |                       0000001000 |                             0011
+               MASK_WAIT |                       0000010000 |                             0100
+           STREAM_SUBMIT |                       0000100000 |                             0101
+             STREAM_WAIT |                       0001000000 |                             0110
+            GHASH_SUBMIT |                       0010000000 |                             0111
+              GHASH_WAIT |                       0100000000 |                             1000
+                  RESULT |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'aes128_gcm_encrypt_block'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                    SEND |                              001 |                              001
+          WAIT_LAST_BUSY |                              010 |                              010
+          WAIT_LAST_DONE |                              011 |                              011
+                  iSTATE |                              100 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'secure_uart_frame_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          KEY_WAIT_READY |                               00 |                               00
+               KEY_PULSE |                               01 |                               01
+          KEY_WAIT_VALID |                               10 |                               10
+              KEY_ACTIVE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'jetson_key_state_reg' using encoding 'sequential' in module 'zybo_secure_control_unit_v2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          KEY_WAIT_READY |                               00 |                               00
+               KEY_PULSE |                               01 |                               01
+          KEY_WAIT_VALID |                               10 |                               10
+              KEY_ACTIVE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'key_state_reg' using encoding 'sequential' in module 'zybo_secure_control_unit_v2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 7     
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input   22 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 8     
+	   2 Input    2 Bit       Adders := 6     
++---XORs : 
+	   2 Input    128 Bit         XORs := 67    
+	   3 Input     32 Bit         XORs := 4     
+	   2 Input     32 Bit         XORs := 12    
+	   2 Input      8 Bit         XORs := 920   
+	   4 Input      8 Bit         XORs := 560   
+	   5 Input      8 Bit         XORs := 80    
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	             1408 Bit    Registers := 4     
+	              384 Bit    Registers := 12    
+	              128 Bit    Registers := 101   
+	               96 Bit    Registers := 6     
+	               32 Bit    Registers := 8     
+	               27 Bit    Registers := 1     
+	               22 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 67    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 68    
++---Muxes : 
+	   2 Input 1408 Bit        Muxes := 12    
+	   2 Input  384 Bit        Muxes := 12    
+	   4 Input  384 Bit        Muxes := 2     
+	   3 Input  384 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 84    
+	   7 Input  128 Bit        Muxes := 4     
+	   3 Input  128 Bit        Muxes := 1     
+	   4 Input  128 Bit        Muxes := 3     
+	   2 Input   96 Bit        Muxes := 7     
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 2     
+	   3 Input   32 Bit        Muxes := 3     
+	   2 Input   27 Bit        Muxes := 1     
+	  19 Input   27 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 12    
+	  10 Input   22 Bit        Muxes := 1     
+	  19 Input   22 Bit        Muxes := 1     
+	  19 Input   19 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 5     
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 2     
+	   9 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 3     
+	   5 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	  19 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 6     
+	  15 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 5     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 3     
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 126   
+	   5 Input    1 Bit        Muxes := 9     
+	  10 Input    1 Bit        Muxes := 27    
+	   7 Input    1 Bit        Muxes := 8     
+	   4 Input    1 Bit        Muxes := 26    
+	   9 Input    1 Bit        Muxes := 2     
+	  19 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'working_key_reg[127:0]' into 'working_key_reg[127:0]' [D:/260805_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes128_key_schedule.sv:19]
+INFO: [Synth 8-3886] merging instance 'working_key_reg[8]' (FDRE) to 'sbox_return0__14'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[9]' (FDRE) to 'sbox_return0__13'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[10]' (FDRE) to 'sbox_return0__12'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[11]' (FDRE) to 'sbox_return0__11'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[12]' (FDRE) to 'sbox_return0__10'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[13]' (FDRE) to 'sbox_return0__9'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[14]' (FDRE) to 'sbox_return0__8'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[15]' (FDRE) to 'sbox_return0__7'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[16]' (FDRE) to 'sbox_return0__22'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[17]' (FDRE) to 'sbox_return0__21'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[18]' (FDRE) to 'sbox_return0__20'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[19]' (FDRE) to 'sbox_return0__19'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[20]' (FDRE) to 'sbox_return0__18'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[21]' (FDRE) to 'sbox_return0__17'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[22]' (FDRE) to 'sbox_return0__16'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[23]' (FDRE) to 'sbox_return0__15'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[24]' (FDRE) to 'sbox_return0__6'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[25]' (FDRE) to 'sbox_return0__5'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[26]' (FDRE) to 'sbox_return0__4'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[27]' (FDRE) to 'sbox_return0__3'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[28]' (FDRE) to 'sbox_return0__2'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[29]' (FDRE) to 'sbox_return0__1'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[30]' (FDRE) to 'sbox_return0__0'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[31]' (FDRE) to 'sbox_return0'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[4]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[5]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[6]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[7]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[8]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[9]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[10]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[11]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[12]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[13]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[14]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[15]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[16]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[16]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[17]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[17]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[18]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[18]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[19]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[19]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[20]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[20]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[21]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[21]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[22]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[22]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[23]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[23]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[24]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[24]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[25]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[25]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[26]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[26]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[27]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[27]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[28]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[28]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[29]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[29]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[30]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[30]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[31]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[31]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[32]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[32]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[33]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[33]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[34]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[34]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[35]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[35]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[36]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[36]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[37]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[37]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[38]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[38]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[39]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[39]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[40]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[40]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[41]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[41]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[42]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[42]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[43]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[43]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[44]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[44]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[45]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[45]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[46]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[46]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[47]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[47]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[48]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[48]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[49]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[49]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[50]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[50]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[51]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[51]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[52]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[52]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[53]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[53]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[54]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[54]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[55]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[55]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[56]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[56]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[57]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[57]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[58]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[58]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[59]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[59]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[60]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[60]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[61]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[61]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[62]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[62]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[63]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[63]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[64]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[64]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[65]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[65]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[66]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[66]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[67]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[67]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[68]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[68]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[69]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[69]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[70]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[70]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[71]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[71]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[72]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[72]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[73]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[73]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[74]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[74]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[75]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[75]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[76]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[76]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[77]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[77]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[78]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[78]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[79]'
+INFO: [Synth 8-3886] merging instance 'basys_cmd_fifo_wr_data_reg[79]' (FDCE) to 'basys_cmd_fifo_wr_data_reg[80]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dec_active_source_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sensor_pc_fifo/\mem_reg[3][126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sensor_pc_fifo/\mem_reg[2][126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sensor_pc_fifo/\mem_reg[1][126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sensor_pc_fifo/\mem_reg[0][126] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_sensor_pc_fifo/\mem_reg[3][127] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_sensor_pc_fifo/\mem_reg[2][127] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_sensor_pc_fifo/\mem_reg[1][127] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_sensor_pc_fifo/\mem_reg[0][127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\door_cmd_to_jetson_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\enc_active_dest_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:02:13 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:02:23 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:43 ; elapsed = 00:03:18 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:06 ; elapsed = 00:03:44 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:20 ; elapsed = 00:04:00 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:21 ; elapsed = 00:04:00 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:32 ; elapsed = 00:04:12 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:32 ; elapsed = 00:04:12 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:35 ; elapsed = 00:04:15 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:35 ; elapsed = 00:04:16 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   225|
+|3     |LUT1   |   104|
+|4     |LUT2   |  4606|
+|5     |LUT3   |  2609|
+|6     |LUT4   |  3925|
+|7     |LUT5   |  3364|
+|8     |LUT6   | 28192|
+|9     |MUXF7  | 10439|
+|10    |MUXF8  |  5146|
+|11    |FDCE   |  5711|
+|12    |FDPE   |   222|
+|13    |FDRE   | 17452|
+|14    |FDSE   |     4|
+|15    |IBUF   |     7|
+|16    |OBUF   |     5|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:35 ; elapsed = 00:04:16 . Memory (MB): peak = 1574.359 ; gain = 491.688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:12 ; elapsed = 00:04:02 . Memory (MB): peak = 1574.359 ; gain = 45.301
+Synthesis Optimization Complete : Time (s): cpu = 00:03:35 ; elapsed = 00:04:17 . Memory (MB): peak = 1574.359 ; gain = 491.688
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.764 . Memory (MB): peak = 1574.359 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15810 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1574.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+202 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:57 ; elapsed = 00:04:51 . Memory (MB): peak = 1574.359 ; gain = 491.688
+INFO: [Common 17-1381] The checkpoint 'D:/260805_AIGIS_inseok/zyboproject_inseok/vivado_jetson_secure/zybo_secure_jetson.runs/synth_1/zybo_secure_control_unit_v2.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1574.359 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file zybo_secure_control_unit_v2_utilization_synth.rpt -pb zybo_secure_control_unit_v2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  6 18:13:04 2026...

@@ -1,0 +1,8 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_master.sv,1785830436,systemVerilog,,D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_slave.sv,,spi_master,,uvm,,,,,,
+D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_slave.sv,1785830436,systemVerilog,,D:/260807_AIGIS_inseok/zyboproject_inseok/tb/tb_spi_384.sv,,spi_slave,,uvm,,,,,,
+D:/260807_AIGIS_inseok/zyboproject_inseok/tb/tb_spi_384.sv,1785833728,systemVerilog,,,,tb_spi_384,,uvm,,,,,,
+D:/260807_AIGIS_inseok/zyboproject_inseok/vivado_tests/tb_spi_384/tb_spi_384.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,

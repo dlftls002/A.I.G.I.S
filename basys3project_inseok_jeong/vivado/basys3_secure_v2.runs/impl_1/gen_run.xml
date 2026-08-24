@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1786415003">
+  <File Type="BITSTR-BMM" Name="basys3_secure_rack_control_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="basys3_secure_rack_control_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="basys3_secure_rack_control_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="basys3_secure_rack_control_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="basys3_secure_rack_control.tcl"/>
+  <File Type="OPT-TIMING" Name="basys3_secure_rack_control_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="basys3_secure_rack_control_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="basys3_secure_rack_control_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="basys3_secure_rack_control_reports.tcl"/>
+  <File Type="OPT-DRC" Name="basys3_secure_rack_control_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="basys3_secure_rack_control.hwdef"/>
+  <File Type="PWROPT-DCP" Name="basys3_secure_rack_control_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="basys3_secure_rack_control_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="basys3_secure_rack_control_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="basys3_secure_rack_control_placed.dcp"/>
+  <File Type="PLACE-IO" Name="basys3_secure_rack_control_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="basys3_secure_rack_control_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="basys3_secure_rack_control_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="basys3_secure_rack_control_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="basys3_secure_rack_control_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="basys3_secure_rack_control_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="basys3_secure_rack_control_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="basys3_secure_rack_control_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="basys3_secure_rack_control_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="basys3_secure_rack_control.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="basys3_secure_rack_control_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="basys3_secure_rack_control_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="basys3_secure_rack_control_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="basys3_secure_rack_control.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="basys3_secure_rack_control_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="basys3_secure_rack_control_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="basys3_secure_rack_control_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="basys3_secure_rack_control_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="basys3_secure_rack_control_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="basys3_secure_rack_control_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="basys3_secure_rack_control_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="basys3_secure_rack_control.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="basys3_secure_rack_control_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="basys3_secure_rack_control_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="basys3_secure_rack_control_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="basys3_secure_rack_control_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="basys3_secure_rack_control_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="basys3_secure_rack_control_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="basys3_secure_rack_control_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="basys3_secure_rack_control_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="basys3_secure_rack_control_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="basys3_secure_rack_control_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="basys3_secure_rack_control_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="basys3_secure_rack_control_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="basys3_secure_rack_control_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="basys3_secure_rack_control_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="basys3_secure_rack_control_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="basys3_secure_rack_control_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="basys3_secure_rack_control_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="basys3_secure_rack_control_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="basys3_secure_rack_control_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="basys3_secure_rack_control_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="basys3_secure_rack_control_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="basys3_secure_rack_control.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="basys3_secure_rack_control_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="basys3_secure_rack_control.rbt"/>
+  <File Type="BITSTR-NKY" Name="basys3_secure_rack_control.nky"/>
+  <File Type="PDI-FILE" Name="basys3_secure_rack_control.pdi"/>
+  <File Type="RCFI_FILE" Name="basys3_secure_rack_control.rcfi"/>
+  <File Type="CFI_FILE" Name="basys3_secure_rack_control.cfi"/>
+  <File Type="RNPI_FILE" Name="basys3_secure_rack_control.rnpi"/>
+  <File Type="NPI_FILE" Name="basys3_secure_rack_control.npi"/>
+  <File Type="RBD_FILE" Name="basys3_secure_rack_control.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="basys3_secure_rack_control.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="basys3_secure_rack_control.sysdef"/>
+  <File Type="BG-BGN" Name="basys3_secure_rack_control.bgn"/>
+  <File Type="BG-DRC" Name="basys3_secure_rack_control.drc"/>
+  <File Type="RDI-RDI" Name="basys3_secure_rack_control.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ip/clk_wiz_0/clk_wiz_0.xci"/>
+        <Attr Name="ImportTime" Val="1785830436"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/dht11_controller.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/CAM_Set.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/UI_Set/Drone_detector/Drone_Classification_Color.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/LED_Set/led_zone_pkg.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/Frame_Set/Frame_Set.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/LED_Set/LED_Set.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/OV7670MemController.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/OV7670_Controller.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/OV7670_attribute_setting.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/UpScaleImgReader.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/VGA_Decoder.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_encrypt_block.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_gcm_decrypt_block.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_gcm_decrypt_ip.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_gcm_encrypt_block.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_gcm_encrypt_ip.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_pkg.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_key_schedule.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes128_pipelined_encrypt_core.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_add_round_key.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_encrypt_round.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/secure/aes_gcm_decrypt_packet.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/secure/aes_gcm_encrypt_packet.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_gcm_ghash.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_mix_columns.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_shift_rows.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/aes_gcm/aes_sub_bytes.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/fire_servo_controller.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/frameBuffer.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/LED_Set/led_zone_monitor.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/rack_servo_controller.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/spi_slave.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/LED_Set/status_packer.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/legacy/vision/RTL/LED_Set/unit_status.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/secure/basys3_secure_rack_control.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="basys3_secure_rack_control"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../constraints/basys3_secure.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

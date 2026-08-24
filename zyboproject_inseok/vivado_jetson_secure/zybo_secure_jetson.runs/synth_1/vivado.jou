@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Aug  6 18:07:51 2026
+# Process ID: 3276
+# Current directory: D:/260805_AIGIS_inseok/zyboproject_inseok/vivado_jetson_secure/zybo_secure_jetson.runs/synth_1
+# Command line: vivado.exe -log zybo_secure_control_unit_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zybo_secure_control_unit_v2.tcl
+# Log file: D:/260805_AIGIS_inseok/zyboproject_inseok/vivado_jetson_secure/zybo_secure_jetson.runs/synth_1/zybo_secure_control_unit_v2.vds
+# Journal file: D:/260805_AIGIS_inseok/zyboproject_inseok/vivado_jetson_secure/zybo_secure_jetson.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source zybo_secure_control_unit_v2.tcl -notrace

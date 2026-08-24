@@ -1,0 +1,4 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+PASS: 384-bit full-duplex SPI transfers both secure frames exactly
+$finish called at time : 98572 ns : File "D:/260807_AIGIS_inseok/zyboproject_inseok/tb/tb_spi_384.sv" Line 102

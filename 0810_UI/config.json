@@ -1,0 +1,11 @@
+{
+  "serial_port": "COM10",
+  "baud_rate": 115200,
+  "cctv_source": null,
+  "pcam_ch_a_source": null,
+  "pcam_ch_b_source": null,
+  "face_camera_source": 0,
+  "fire_threshold": 30,
+  "show_security_random": true,
+  "face_overlay_seconds": 8
+}

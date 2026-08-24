@@ -1,0 +1,146 @@
+{
+  "ssm": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": true
+    }
+  },
+  "jjm": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": true,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "car": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": true,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "kdw": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": true,
+      "RACK-04": false
+    }
+  },
+  "U0811170419": {
+    "name": "yjw",
+    "department": "team",
+    "position": "user",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": true,
+      "RACK-04": false
+    }
+  },
+  "U0813145645": {
+    "name": "jjm",
+    "department": "dd",
+    "position": "dd",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": true
+    }
+  },
+  "U0813145851": {
+    "name": "kang",
+    "department": "kang",
+    "position": "kang",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": true
+    }
+  },
+  "U0813212540": {
+    "name": "YJW",
+    "department": "YY",
+    "position": "BOSS",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": true,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "U0813213538": {
+    "name": "yyjjww",
+    "department": "yy",
+    "position": "bbbooss",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": true,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "U0816145900": {
+    "name": "yj",
+    "department": "jj",
+    "position": "yaya",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": true
+    }
+  },
+  "U0816152654": {
+    "name": "yjyjyjyjyj",
+    "department": "yuyuuyuyyu",
+    "position": "ajajaajaj",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": true,
+      "RACK-02": true,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "U0816173907": {
+    "name": "yjyjw",
+    "department": "aeae",
+    "position": "b",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": true
+    }
+  },
+  "U0816194804": {
+    "name": "dong",
+    "department": "dong",
+    "position": "dong",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": true,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  }
+}

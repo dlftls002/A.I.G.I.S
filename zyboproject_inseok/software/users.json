@@ -1,0 +1,62 @@
+{
+  "ssm": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": true
+    }
+  },
+  "jjm": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": true,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "car": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": true,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "kdw": {
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": true,
+      "RACK-04": false
+    }
+  },
+  "U0810120409": {
+    "name": "asf",
+    "department": "asf",
+    "position": "afs",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  },
+  "U0810153108": {
+    "name": "asd",
+    "department": "asd",
+    "position": "asd",
+    "open_entrance": true,
+    "rack_control": {
+      "RACK-01": false,
+      "RACK-02": false,
+      "RACK-03": false,
+      "RACK-04": false
+    }
+  }
+}

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_master.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/legacy/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/260807_AIGIS_inseok/zyboproject_inseok/tb/tb_spi_384.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_spi_384
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/260807_AIGIS_inseok/zyboproject_inseok/vivado_tests/tb_spi_384/tb_spi_384.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

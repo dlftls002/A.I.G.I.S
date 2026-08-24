@@ -1,0 +1,203 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Aug 11 11:28:17 2026
+| Host         : DESKTOP-7CFQ9ND running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file basys3_secure_rack_control_control_sets_placed.rpt
+| Design       : basys3_secure_rack_control
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   125 |
+|    Minimum number of control sets                        |   125 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   185 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   125 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    10 |
+| >= 10 to < 12      |    10 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |    12 |
+| >= 16              |    85 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              23 |           15 |
+| No           | No                    | Yes                    |             452 |          130 |
+| No           | Yes                   | No                     |              31 |           11 |
+| Yes          | No                    | No                     |              13 |            4 |
+| Yes          | No                    | Yes                    |            2514 |          669 |
+| Yes          | Yes                   | No                     |            8246 |         2816 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |                                               Enable Signal                                              |                               Set/Reset Signal                               | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_SCCB_MASTER/U_I2C_MASTER/u_i2c_master/scl_r                       | rst_IBUF                                                                     |                1 |              1 |         1.00 |
+|  pclk_IBUF_BUFG |                                                                                                          |                                                                              |                1 |              2 |         2.00 |
+|  rclk_BUFG      |                                                                                                          |                                                                              |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/rack4_open                                                  | rst_IBUF                                                                     |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG  | u_spi_slave/rx_data_reg[361]_0[0]                                                                        | rst_IBUF                                                                     |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG  | u_spi_slave/tx_started                                                                                   | rst_IBUF                                                                     |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_OV7670_Controller/u_1ms_timer/state_reg[0]_0                      | rst_IBUF                                                                     |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_SCCB_MASTER/U_I2C_MASTER/u_i2c_master/tx_shift_reg_0              | rst_IBUF                                                                     |                2 |              8 |         4.00 |
+|  pclk_IBUF_BUFG | U_LED_SET/U_ZONE_MONITOR/py[7]_i_1_n_0                                                                   | rst_IBUF                                                                     |                2 |              8 |         4.00 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/pixelEvenOdd                                                                        | U_CAM_SET/U_CAM_CTRL/pixelData[15]_i_1_n_0                                   |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_OV7670_Controller/target_ms[7]_i_1_n_0                            | rst_IBUF                                                                     |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG  | u_spi_slave/rx_valid_reg_0[0]                                                                            | rst_IBUF                                                                     |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/bit_index[7]_i_2_n_0                                 | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/bit_index[7]_i_1_n_0     |                2 |              8 |         4.00 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/pixelData[15]                                                                       | U_CAM_SET/U_CAM_CTRL/pixelData[15]_i_1_n_0                                   |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/bit_index[7]_i_2__0_n_0                             | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/bit_index[7]_i_1__0_n_0 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_OV7670_Controller/u_1ms_timer/E[0]                                | rst_IBUF                                                                     |                3 |              8 |         2.67 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_0                                                                            | rst_IBUF                                                                     |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG  | rclk_BUFG                                                                                                | rst_IBUF                                                                     |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/FSM_onehot_state_reg[6][0]      | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/E[0]                                                 | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/aes_input_ready                | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG  | U_VGA_DECODER/u_pclk_gen/E[0]                                                                            | rst_IBUF                                                                     |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/E[0]                           | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[0].U_DHT11/U_TICK_10u/FSM_sequential_c_state_reg[0][0]                                    | rst_IBUF                                                                     |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[3].U_DHT11/U_TICK_10u/FSM_sequential_c_state_reg[2][0]                                    | rst_IBUF                                                                     |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[2].U_DHT11/U_TICK_10u/FSM_sequential_c_state_reg[0][0]                                    | rst_IBUF                                                                     |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[1].U_DHT11/U_TICK_10u/FSM_sequential_c_state_reg[2][0]                                    | rst_IBUF                                                                     |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_SCCB_MASTER/rst_n                                                 |                                                                              |                4 |             13 |         3.25 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_6[0]                                                                         | rst_IBUF                                                                     |                3 |             14 |         4.67 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_8[0]                                                                         | rst_IBUF                                                                     |                3 |             14 |         4.67 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_7[0]                                                                         | rst_IBUF                                                                     |                4 |             14 |         3.50 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_14[0]                                                                        | rst_IBUF                                                                     |                3 |             14 |         4.67 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_9[0]                                                                         | rst_IBUF                                                                     |                4 |             14 |         3.50 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/E[0]                                                                                | rst_IBUF                                                                     |                3 |             14 |         4.67 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_10[0]                                                                        | rst_IBUF                                                                     |                5 |             14 |         2.80 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_5[0]                                                                         | rst_IBUF                                                                     |                5 |             14 |         2.80 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_4[0]                                                                         | rst_IBUF                                                                     |                4 |             14 |         3.50 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_13[0]                                                                        | rst_IBUF                                                                     |                5 |             14 |         2.80 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_12[0]                                                                        | rst_IBUF                                                                     |                4 |             14 |         3.50 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_11[0]                                                                        | rst_IBUF                                                                     |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_OV7670_Controller/reg_addr[7]_i_1_n_0                             | rst_IBUF                                                                     |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[0].U_DHT11/U_TICK_10u/E[0]                                                                | rst_IBUF                                                                     |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[1].U_DHT11/U_TICK_10u/E[0]                                                                | rst_IBUF                                                                     |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[2].U_DHT11/U_TICK_10u/E[0]                                                                | rst_IBUF                                                                     |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[3].U_DHT11/U_TICK_10u/E[0]                                                                | rst_IBUF                                                                     |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG  | U_CAM_SET/U_OV7670_ATTRIBUTE_SETTING/U_SCCB_MASTER/rw_reg                                                | rst_IBUF                                                                     |                3 |             17 |         5.67 |
+|  clk_IBUF_BUFG  |                                                                                                          |                                                                              |               12 |             19 |         1.58 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_valid_reg[9]_1[0]        | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               12 |             36 |         3.00 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[3].U_DHT11/U_TICK_10u/dhtio_s1_reg[0]                                                     | rst_IBUF                                                                     |               13 |             46 |         3.54 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[0].U_DHT11/U_TICK_10u/dhtio_s1_reg[0]                                                     | rst_IBUF                                                                     |               11 |             46 |         4.18 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[2].U_DHT11/U_TICK_10u/dhtio_s1_reg[0]                                                     | rst_IBUF                                                                     |               10 |             46 |         4.60 |
+|  clk_IBUF_BUFG  | gen_dht11_fire[1].U_DHT11/U_TICK_10u/dhtio_s1_reg[0]                                                     | rst_IBUF                                                                     |               11 |             46 |         4.18 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/nextAddr[16]_i_2_n_0                                                                | U_CAM_SET/U_CAM_CTRL/nextAddr[16]_i_1_n_0                                    |               12 |             49 |         4.08 |
+|  pclk_IBUF_BUFG | U_CAM_SET/U_CAM_CTRL/we_reg_3                                                                            | rst_IBUF                                                                     |               16 |             60 |         3.75 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/sel                                                          | rst_IBUF                                                                     |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/rekey_in_progress_reg[0]                                     | rst_IBUF                                                                     |               30 |             65 |         2.17 |
+|  clk_IBUF_BUFG  | status_snapshot0                                                                                         | rst_IBUF                                                                     |               12 |             74 |         6.17 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/E[0]                                                         | rst_IBUF                                                                     |               11 |             75 |         6.82 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/round_keys[1151]_i_1_n_0                                   | rst_IBUF                                                                     |               41 |            128 |         3.12 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/round_keys[1279]_i_1_n_0                                   | rst_IBUF                                                                     |               49 |            128 |         2.61 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/round_keys[1407]_i_1_n_0                                   | rst_IBUF                                                                     |               55 |            128 |         2.33 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___224_n_0                                                | rst_IBUF                                                                     |               50 |            128 |         2.56 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___237_n_0                                                | rst_IBUF                                                                     |               34 |            128 |         3.76 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___420_n_0                                                | rst_IBUF                                                                     |               62 |            128 |         2.06 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___422_n_0                                                | rst_IBUF                                                                     |               47 |            128 |         2.72 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___424_n_0                                                | rst_IBUF                                                                     |               36 |            128 |         3.56 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___426_n_0                                                | rst_IBUF                                                                     |               45 |            128 |         2.84 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___421_n_0                                                | rst_IBUF                                                                     |               49 |            128 |         2.61 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/i___423_n_0                                                | rst_IBUF                                                                     |               57 |            128 |         2.25 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_key_schedule/working_key[127]_i_1_n_0                                   | rst_IBUF                                                                     |               40 |            128 |         3.20 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[1][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               44 |            128 |         2.91 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[2][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               49 |            128 |         2.61 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[3][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               46 |            128 |         2.78 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[9][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               36 |            128 |         3.56 |
+|  clk_IBUF_BUFG  | u_spi_slave/pending_random                                                                               | rst_IBUF                                                                     |               46 |            128 |         2.78 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/working_key[127]_i_1_n_0                                    | rst_IBUF                                                                     |               41 |            128 |         3.12 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/round_keys[1407]_i_1_n_0                                    | rst_IBUF                                                                     |               52 |            128 |         2.46 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/round_keys[1279]_i_1_n_0                                    | rst_IBUF                                                                     |               48 |            128 |         2.67 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___423_n_0                                                 | rst_IBUF                                                                     |               58 |            128 |         2.21 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/round_keys[1151]_i_1_n_0                                    | rst_IBUF                                                                     |               47 |            128 |         2.72 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___420_n_0                                                 | rst_IBUF                                                                     |               60 |            128 |         2.13 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___421_n_0                                                 | rst_IBUF                                                                     |               56 |            128 |         2.29 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_valid_reg[9]_0[0]        | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               44 |            128 |         2.91 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/FSM_onehot_state_reg[2][0]     | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               50 |            128 |         2.56 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___426_n_0                                                 | rst_IBUF                                                                     |               57 |            128 |         2.25 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/v[127]_i_1__0_n_0                                   | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               36 |            128 |         3.56 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___422_n_0                                                 | rst_IBUF                                                                     |               48 |            128 |         2.67 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/ghash[127]_i_1__0_n_0                               | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               54 |            128 |         2.37 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/z1                                                  | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               51 |            128 |         2.51 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/z[127]_i_2__0_n_0                                   | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/z[127]_i_1__0_n_0       |               42 |            128 |         3.05 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_ghash/y__0                                                | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               41 |            128 |         3.12 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___424_n_0                                                 | rst_IBUF                                                                     |               46 |            128 |         2.78 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___224_n_0                                                 | rst_IBUF                                                                     |               59 |            128 |         2.17 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/i___237_n_0                                                 | rst_IBUF                                                                     |               45 |            128 |         2.84 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[6][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               41 |            128 |         3.12 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[7][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               42 |            128 |         3.05 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[8][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               47 |            128 |         2.72 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[3][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               46 |            128 |         2.78 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[4][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               43 |            128 |         2.98 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[5][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               45 |            128 |         2.84 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[0][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               43 |            128 |         2.98 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[1][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               43 |            128 |         2.98 |
+|  clk_IBUF_BUFG  | u_command_decrypt/u_decrypt_ip/u_gcm_decrypt/u_aes_encrypt/u_encrypt_core/stage_state[2][127]_i_1__0_n_0 | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |               41 |            128 |         3.12 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/z[127]_i_2_n_0                                       | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/z[127]_i_1_n_0           |               36 |            128 |         3.56 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/z1                                                   | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               27 |            128 |         4.74 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/y__0                                                 | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               28 |            128 |         4.57 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/v[127]_i_1_n_0                                       | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               38 |            128 |         3.37 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_ghash/ghash[127]_i_1_n_0                                   | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               26 |            128 |         4.92 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[0][127]_i_2_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               47 |            128 |         2.72 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_valid_reg[9]_1[0]         | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               30 |            128 |         4.27 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_valid_reg[9]_0[0]         | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               21 |            128 |         6.10 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/E[0]                            | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               22 |            128 |         5.82 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[9][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               36 |            128 |         3.56 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[8][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               45 |            128 |         2.84 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[7][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               50 |            128 |         2.56 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[6][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               46 |            128 |         2.78 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[5][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               47 |            128 |         2.72 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_gcm_encrypt/u_aes_encrypt/u_encrypt_core/stage_state[4][127]_i_1_n_0     | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               48 |            128 |         2.67 |
+|  clk_IBUF_BUFG  | u_status_encrypt/u_encrypt_ip/u_key_schedule/enc_key_load_reg[0]                                         | u_status_encrypt/u_encrypt_ip/u_key_schedule/SR[0]                           |               29 |            139 |         4.79 |
+|  clk_IBUF_BUFG  | u_spi_slave/rx_data_reg[361]_1[0]                                                                        | rst_IBUF                                                                     |               63 |            327 |         5.19 |
+|  clk_IBUF_BUFG  | u_spi_slave/E[0]                                                                                         | u_command_decrypt/u_decrypt_ip/u_key_schedule/SR[0]                          |              112 |            352 |         3.14 |
+|  clk_IBUF_BUFG  | u_spi_slave/rx_data[383]_i_1_n_0                                                                         | rst_IBUF                                                                     |              172 |            384 |         2.23 |
+|  clk_IBUF_BUFG  | u_spi_slave/tx_shift[382]_i_1_n_0                                                                        | rst_IBUF                                                                     |               89 |            384 |         4.31 |
+|  clk_IBUF_BUFG  | u_spi_slave/bit_cnt[31]_i_1_n_0                                                                          | rst_IBUF                                                                     |               64 |            415 |         6.48 |
+|  clk_IBUF_BUFG  |                                                                                                          | rst_IBUF                                                                     |              141 |            483 |         3.43 |
++-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

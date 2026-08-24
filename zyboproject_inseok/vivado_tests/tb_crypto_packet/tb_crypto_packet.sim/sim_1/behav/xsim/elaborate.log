@@ -1,0 +1,80 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a23af935c7a34d2aac467e6086c77ad1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_crypto_packet_behav xil_defaultlib.tb_crypto_packet xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/tb/tb_crypto_packet.sv" Line 3. Module tb_crypto_packet has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/secure/aes_gcm_encrypt_packet.sv" Line 5. Module aes_gcm_encrypt_packet has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_gcm_ghash.sv" Line 1. Module aes_gcm_ghash has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/secure/aes_gcm_decrypt_packet.sv" Line 5. Module aes_gcm_decrypt_packet has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_shift_rows.sv" Line 1. Module aes_shift_rows has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_mix_columns.sv" Line 1. Module aes_mix_columns has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/260807_AIGIS_inseok/zyboproject_inseok/rtl/aes_gcm/aes_sub_bytes.sv" Line 1. Module aes_sub_bytes has a timescale but at least one module in design doesn't have timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4100' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.aes_pkg
+Compiling module xil_defaultlib.aes128_key_schedule
+Compiling module xil_defaultlib.aes_sub_bytes
+Compiling module xil_defaultlib.aes_shift_rows
+Compiling module xil_defaultlib.aes_mix_columns
+Compiling module xil_defaultlib.aes_add_round_key
+Compiling module xil_defaultlib.aes_encrypt_round
+Compiling module xil_defaultlib.aes128_pipelined_encrypt_core_de...
+Compiling module xil_defaultlib.aes128_encrypt_block
+Compiling module xil_defaultlib.aes_gcm_ghash
+Compiling module xil_defaultlib.aes128_gcm_encrypt_block
+Compiling module xil_defaultlib.aes128_gcm_encrypt_ip(BOARD_ID=3...
+Compiling module xil_defaultlib.aes_gcm_encrypt_packet
+Compiling module xil_defaultlib.aes128_gcm_decrypt_block
+Compiling module xil_defaultlib.aes128_gcm_decrypt_ip
+Compiling module xil_defaultlib.aes_gcm_decrypt_packet
+Compiling module xil_defaultlib.tb_crypto_packet
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_crypto_packet_behav

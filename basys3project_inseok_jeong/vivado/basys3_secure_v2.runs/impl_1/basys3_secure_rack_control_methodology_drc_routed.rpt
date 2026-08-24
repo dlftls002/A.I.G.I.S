@@ -1,0 +1,459 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Aug 11 11:29:42 2026
+| Host         : DESKTOP-7CFQ9ND running 64-bit major release  (build 9200)
+| Command      : report_methodology -file basys3_secure_rack_control_methodology_drc_routed.rpt -pb basys3_secure_rack_control_methodology_drc_routed.pb -rpx basys3_secure_rack_control_methodology_drc_routed.rpx
+| Design       : basys3_secure_rack_control
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 84
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 1          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                    | 38         |
+| HPDR-1    | Warning          | Port pin direction inconsistency               | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                  | 43         |
++-----------+------------------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks cam_pclk and sys_clk_pin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks cam_pclk] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks cam_pclk and sys_clk_pin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks cam_pclk] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_1/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_10/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_12/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_13/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_14/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_15/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_2/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_3/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_4/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_7/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_8/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_0_9/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_1/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_10/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_10__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_12/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_12__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_13/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_13__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_14/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_14__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_15/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_15__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_1__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_2/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_2__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_3/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_3__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_4/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_4__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_7/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_7__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_8/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_8__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_9/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_9__0/CLKBWRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46/C is not reached by a timing clock
+Related violations: <none>
+
+HPDR-1#1 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) sda direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (sda) connected to this Port, but both were not found.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on cs_n_in relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on dhtio[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on dhtio[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on dhtio[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on dhtio[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on href relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on mosi_in relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on pdata[0] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on pdata[1] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on pdata[2] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on pdata[3] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on pdata[4] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on pdata[5] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on pdata[6] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on pdata[7] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on rst relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on sclk_in relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on sda relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on vsync relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on fire_servo_pwm[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on fire_servo_pwm[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on fire_servo_pwm[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on fire_servo_pwm[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on h_sync relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on miso_out relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on port_blue[0] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on port_blue[1] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on port_blue[2] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on port_blue[3] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on port_green[0] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An output delay is missing on port_green[1] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An output delay is missing on port_green[2] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An output delay is missing on port_green[3] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An output delay is missing on port_red[0] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on port_red[1] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An output delay is missing on port_red[2] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An output delay is missing on port_red[3] relative to clock(s) cam_pclk, sys_clk_pin
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An output delay is missing on scl relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An output delay is missing on servo_pwm_r1 relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An output delay is missing on servo_pwm_r2 relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An output delay is missing on servo_pwm_r3 relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An output delay is missing on servo_pwm_r4 relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An output delay is missing on v_sync relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+

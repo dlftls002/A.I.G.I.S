@@ -1,0 +1,940 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 11 11:23:25 2026
+# Process ID: 27964
+# Current directory: D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1
+# Command line: vivado.exe -log basys3_secure_rack_control.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source basys3_secure_rack_control.tcl
+# Log file: D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1/basys3_secure_rack_control.vds
+# Journal file: D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source basys3_secure_rack_control.tcl -notrace
+Command: synth_design -top basys3_secure_rack_control -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39432
+WARNING: [Synth 8-2507] parameter declaration becomes local in dht11_controller with formal parameter declaration list [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/dht11_controller.v:26]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1084.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'basys3_secure_rack_control' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/basys3_secure_rack_control.sv:13]
+	Parameter SYS_CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter TEMP_THRESHOLD bound to: 30 - type: integer 
+	Parameter MASTER_KEY bound to: 128'b01101100100011101001110011110101011100001001001100101011110101011010001111110001000001001101011110111000100111100110001011000001 
+	Parameter TRIGGER_LIMIT bound to: 32'sb00001011111010111100001000000000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000010001 
+INFO: [Synth 8-6157] synthesizing module 'dht11_controller' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/dht11_controller.v:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter START bound to: 1 - type: integer 
+	Parameter WAIT bound to: 2 - type: integer 
+	Parameter SYNC_L bound to: 3 - type: integer 
+	Parameter SYNC_H bound to: 4 - type: integer 
+	Parameter DATA_SYNC bound to: 5 - type: integer 
+	Parameter DATA_C bound to: 6 - type: integer 
+	Parameter STOP bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tick_gen_10u' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/dht11_controller.v:190]
+	Parameter F_COUNT bound to: 1000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tick_gen_10u' (1#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/dht11_controller.v:190]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/dht11_controller.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'dht11_controller' (2#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/dht11_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fire_servo_controller' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/fire_servo_controller.sv:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter PERIOD_MS bound to: 32'sb00000000000000000000000000010100 
+	Parameter PULSE_MIN_US bound to: 32'sb00000000000000000000001010001010 
+	Parameter PULSE_MAX_US bound to: 32'sb00000000000000000000010111011100 
+	Parameter CYCLES_PER_MS bound to: 32'sb00000000000000011000011010100000 
+	Parameter CYCLES_PER_US bound to: 32'sb00000000000000000000000001100100 
+	Parameter PERIOD_CYCLES bound to: 32'sb00000000000111101000010010000000 
+	Parameter PULSE_MIN_CYCLES bound to: 32'sb00000000000000001111110111101000 
+	Parameter PULSE_MAX_CYCLES bound to: 32'sb00000000000000100100100111110000 
+INFO: [Synth 8-6155] done synthesizing module 'fire_servo_controller' (3#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/fire_servo_controller.sv:3]
+INFO: [Synth 8-226] default block is never used [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/basys3_secure_rack_control.sv:159]
+INFO: [Synth 8-6157] synthesizing module 'spi_slave' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/spi_slave.sv:4]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000110000000 
+	Parameter CPOL bound to: 1'b0 
+	Parameter CPHA bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spi_slave' (4#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/spi_slave.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'aes_gcm_decrypt_packet' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/aes_gcm_decrypt_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_decrypt_ip' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_decrypt_ip.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_key_schedule' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_key_schedule.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_key_schedule' (5#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_key_schedule.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_decrypt_block' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_decrypt_block.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_encrypt_block' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_encrypt_block.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes128_pipelined_encrypt_core' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_pipelined_encrypt_core.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_encrypt_round' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_encrypt_round.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_sub_bytes' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_sub_bytes.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_sub_bytes' (6#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_sub_bytes.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_shift_rows' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_shift_rows.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_shift_rows' (7#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_shift_rows.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_mix_columns' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_mix_columns.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_mix_columns' (8#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_mix_columns.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_add_round_key' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_add_round_key.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_add_round_key' (9#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_add_round_key.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_encrypt_round' (10#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_encrypt_round.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_pipelined_encrypt_core' (11#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_pipelined_encrypt_core.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_encrypt_block' (12#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_encrypt_block.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_gcm_ghash' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_gcm_ghash.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_gcm_ghash' (13#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes_gcm_ghash.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_decrypt_block' (14#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_decrypt_block.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_decrypt_ip' (15#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_decrypt_ip.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_gcm_decrypt_packet' (16#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/aes_gcm_decrypt_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'aes_gcm_encrypt_packet' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/aes_gcm_encrypt_packet.sv:5]
+	Parameter FRAME_MAGIC bound to: 16'b1010010101011010 
+	Parameter FRAME_LENGTH bound to: 8'b00010000 
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_encrypt_ip' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_encrypt_ip.sv:1]
+	Parameter BOARD_ID bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes128_gcm_encrypt_block' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_encrypt_block.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_encrypt_block' (17#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_encrypt_block.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_gcm_encrypt_ip' (18#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_gcm_encrypt_ip.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_gcm_encrypt_packet' (19#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/aes_gcm_encrypt_packet.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'rack_servo_controller' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/rack_servo_controller.sv:112]
+	Parameter CLOCK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter PWM_FREQ_HZ bound to: 50 - type: integer 
+	Parameter CLOSE_PULSE_US bound to: 1000 - type: integer 
+	Parameter OPEN_PULSE_US bound to: 2000 - type: integer 
+	Parameter PERIOD_COUNT bound to: 2000000 - type: integer 
+	Parameter CLOSE_COUNT bound to: 100000 - type: integer 
+	Parameter OPEN_COUNT bound to: 200000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rack_servo_controller' (20#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/rack_servo_controller.sv:112]
+INFO: [Synth 8-6157] synthesizing module 'CAM_Set' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/CAM_Set.sv:3]
+	Parameter IMG_W bound to: 32'sb00000000000000000000000101000000 
+	Parameter IMG_H bound to: 32'sb00000000000000000000000011110000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000010001 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39998]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: double 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (21#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39998]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (22#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (23#1) [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (24#1) [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'OV7670_attribute_setting' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_attribute_setting.sv:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'OV7670_Controller' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_Controller.sv:2]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter ROM_DEPTH bound to: 32'sb00000000000000000000000001001011 
+INFO: [Synth 8-6157] synthesizing module 'counter' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_Controller.sv:211]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter MS bound to: 1 - type: integer 
+	Parameter MAX_COUNT bound to: 100000 - type: integer 
+	Parameter BIT_WIDTH bound to: 32'sb00000000000000000000000000010001 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (25#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_Controller.sv:211]
+INFO: [Synth 8-226] default block is never used [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_Controller.sv:155]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_Controller' (26#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_Controller.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'sccb_master' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:3]
+	Parameter REG_WAIT bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter ID_ADDR bound to: 3'b010 
+	Parameter INTE_ADDR bound to: 3'b011 
+	Parameter READ bound to: 3'b100 
+	Parameter WRITE bound to: 3'b101 
+	Parameter STOP bound to: 3'b110 
+INFO: [Synth 8-6157] synthesizing module 'I2C_MASTER' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:228]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:273]
+	Parameter IDLE bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter WAIT_CMD bound to: 3'b010 
+	Parameter DATA bound to: 3'b011 
+	Parameter DATA_ACK bound to: 3'b100 
+	Parameter STOP bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master' (27#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:273]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_MASTER' (28#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:228]
+WARNING: [Synth 8-7071] port 'ack_out' of module 'I2C_MASTER' is unconnected for instance 'U_I2C_MASTER' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:47]
+WARNING: [Synth 8-7071] port 'busy' of module 'I2C_MASTER' is unconnected for instance 'U_I2C_MASTER' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:47]
+WARNING: [Synth 8-7023] instance 'U_I2C_MASTER' of module 'I2C_MASTER' has 14 connections declared, but only 12 given [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'sccb_master' (29#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/sccb_master.sv:3]
+WARNING: [Synth 8-7071] port 'r_data' of module 'sccb_master' is unconnected for instance 'U_SCCB_MASTER' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_attribute_setting.sv:31]
+WARNING: [Synth 8-7071] port 'r_valid' of module 'sccb_master' is unconnected for instance 'U_SCCB_MASTER' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_attribute_setting.sv:31]
+WARNING: [Synth 8-7023] instance 'U_SCCB_MASTER' of module 'sccb_master' has 11 connections declared, but only 9 given [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_attribute_setting.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_attribute_setting' (30#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670_attribute_setting.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'OV7670MemController' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670MemController.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670MemController' (31#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/OV7670MemController.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'framebuffer' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/frameBuffer.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'framebuffer' (32#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/frameBuffer.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'UpScaleImgReader' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/UpScaleImgReader.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'UpScaleImgReader' (33#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/UpScaleImgReader.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'CAM_Set' (34#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/CAM_Set/CAM_Set.sv:3]
+WARNING: [Synth 8-7071] port 'cam_href' of module 'CAM_Set' is unconnected for instance 'U_CAM_SET' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/basys3_secure_rack_control.sv:556]
+WARNING: [Synth 8-7071] port 'cam_vsync' of module 'CAM_Set' is unconnected for instance 'U_CAM_SET' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/basys3_secure_rack_control.sv:556]
+WARNING: [Synth 8-7023] instance 'U_CAM_SET' of module 'CAM_Set' has 22 connections declared, but only 20 given [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/basys3_secure_rack_control.sv:556]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Decoder' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'pclk_gen' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'pclk_gen' (35#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:45]
+INFO: [Synth 8-6157] synthesizing module 'pixel_counter' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:68]
+	Parameter H_MAX bound to: 800 - type: integer 
+	Parameter V_MAX bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_counter' (36#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:68]
+INFO: [Synth 8-6157] synthesizing module 'vga_decoder' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:108]
+	Parameter H_Visible_area bound to: 640 - type: integer 
+	Parameter H_Front_porch bound to: 16 - type: integer 
+	Parameter H_Sync_pulse bound to: 96 - type: integer 
+	Parameter H_Back_porch bound to: 48 - type: integer 
+	Parameter H_Whole_line bound to: 800 - type: integer 
+	Parameter V_Visible_area bound to: 480 - type: integer 
+	Parameter V_Front_porch bound to: 10 - type: integer 
+	Parameter V_Sync_pulse bound to: 2 - type: integer 
+	Parameter V_Back_porch bound to: 33 - type: integer 
+	Parameter V_Whole_frame bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_decoder' (37#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:108]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Decoder' (38#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/VGA_Decoder.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'LED_Set' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/LED_Set.sv:16]
+	Parameter IMG_W bound to: 32'sb00000000000000000000000101000000 
+	Parameter IMG_H bound to: 32'sb00000000000000000000000011110000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter LED_V_MIN bound to: 6'b101000 
+	Parameter LED_V_CLIP bound to: 6'b111010 
+	Parameter LED_DELTA_MIN bound to: 6'b000100 
+	Parameter LED_DELTA_MIN_CLIP bound to: 6'b000011 
+	Parameter LED_HUE_MARGIN bound to: 6'b000010 
+	Parameter LED_GREEN_BLUE_TOL bound to: 6'b000100 
+	Parameter ZONE_THRESHOLD bound to: 32'sb00000000000000000000000000001000 
+	Parameter CONF_MAX bound to: 4'b1111 
+	Parameter CONF_UP bound to: 4'b0100 
+	Parameter CONF_DOWN bound to: 4'b0001 
+	Parameter CONF_ON bound to: 4'b0100 
+INFO: [Synth 8-6157] synthesizing module 'Drone_Classification_Color' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/UI_Set/Drone_detector/Drone_Classification_Color.sv:12]
+	Parameter V_MIN_LED bound to: 6'b101000 
+	Parameter V_CLIP bound to: 6'b111010 
+	Parameter DELTA_MIN bound to: 6'b000100 
+	Parameter DELTA_MIN_CLIP bound to: 6'b000011 
+	Parameter HUE_MARGIN bound to: 6'b000010 
+	Parameter GREEN_BLUE_TOL bound to: 6'b000100 
+INFO: [Synth 8-6155] done synthesizing module 'Drone_Classification_Color' (39#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/UI_Set/Drone_detector/Drone_Classification_Color.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'led_zone_monitor' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/led_zone_monitor.sv:14]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000101000000 
+	Parameter HEIGHT bound to: 32'sb00000000000000000000000011110000 
+	Parameter ZONE_THRESHOLD bound to: 32'sb00000000000000000000000000001000 
+	Parameter CONF_MAX bound to: 4'b1111 
+	Parameter CONF_UP bound to: 4'b0100 
+	Parameter CONF_DOWN bound to: 4'b0001 
+	Parameter CONF_ON bound to: 4'b0100 
+	Parameter MAX_ZONE_PIXELS bound to: 32'sb00000000000000000010000000000000 
+	Parameter CNT_W bound to: 32'sb00000000000000000000000000001110 
+INFO: [Synth 8-6155] done synthesizing module 'led_zone_monitor' (40#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/led_zone_monitor.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'unit_status' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/unit_status.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'unit_status' (41#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/unit_status.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'status_packer' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/status_packer.sv:7]
+	Parameter VERSION bound to: 8'b00000010 
+	Parameter MY_RACK_ID bound to: 8'b00000000 
+	Parameter SYNC_HI bound to: 8'b10100101 
+	Parameter SYNC_LO bound to: 8'b01011010 
+INFO: [Synth 8-6155] done synthesizing module 'status_packer' (42#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/status_packer.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'LED_Set' (43#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/LED_Set/LED_Set.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'Frame_Set' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/Frame_Set/Frame_Set.sv:18]
+	Parameter IMG_W bound to: 32'sb00000000000000000000000101000000 
+	Parameter IMG_H bound to: 32'sb00000000000000000000000011110000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter COLOR_GREEN bound to: 12'b000011110000 
+	Parameter COLOR_RED bound to: 12'b111100000000 
+	Parameter COLOR_GRAY bound to: 12'b100010001000 
+INFO: [Synth 8-6155] done synthesizing module 'Frame_Set' (44#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/legacy/vision/RTL/Frame_Set/Frame_Set.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'basys3_secure_rack_control' (45#1) [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/secure/basys3_secure_rack_control.sv:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1127.844 ; gain = 42.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.844 ; gain = 42.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1127.844 ; gain = 42.973
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1127.844 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'U_CAM_SET/U_CLK_WIZ/inst'
+Finished Parsing XDC File [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'U_CAM_SET/U_CLK_WIZ/inst'
+Parsing XDC File [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'U_CAM_SET/U_CLK_WIZ/inst'
+Finished Parsing XDC File [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'U_CAM_SET/U_CLK_WIZ/inst'
+Parsing XDC File [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc:15]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc:22]
+WARNING: [Vivado 12-507] No nets matched 'pclk_IBUF'. [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/constraints/basys3_secure.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basys3_secure_rack_control_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basys3_secure_rack_control_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basys3_secure_rack_control_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basys3_secure_rack_control_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'U_CAM_SET/U_CLK_WIZ/inst'
+Finished Parsing XDC File [d:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'U_CAM_SET/U_CLK_WIZ/inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1399.969 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1399.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1399.969 ; gain = 315.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1399.969 ; gain = 315.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U_CAM_SET/U_CLK_WIZ/inst. (constraint file  D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1/dont_touch.xdc, line 10).
+Applied set_property KEEP_HIERARCHY = SOFT for U_CAM_SET/U_CLK_WIZ. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1399.969 ; gain = 315.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'dht11_controller'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'aes128_gcm_decrypt_block'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'aes128_gcm_encrypt_block'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sccb_master'
+INFO: [Synth 8-802] inferred FSM for state register 'key_state_reg' in module 'basys3_secure_rack_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                             0000
+                   START |                              001 |                             0001
+                    WAIT |                              010 |                             0010
+                  SYNC_L |                              011 |                             0011
+                  SYNC_H |                              100 |                             0100
+               DATA_SYNC |                              101 |                             0101
+                  DATA_C |                              110 |                             0110
+                    STOP |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'c_state_reg' using encoding 'sequential' in module 'dht11_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+             HASH_SUBMIT |                       0000000010 |                             0001
+               HASH_WAIT |                       0000000100 |                             0010
+             MASK_SUBMIT |                       0000001000 |                             0011
+               MASK_WAIT |                       0000010000 |                             0100
+           STREAM_SUBMIT |                       0000100000 |                             0101
+             STREAM_WAIT |                       0001000000 |                             0110
+            GHASH_SUBMIT |                       0010000000 |                             0111
+              GHASH_WAIT |                       0100000000 |                             1000
+                  RESULT |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'aes128_gcm_decrypt_block'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+             HASH_SUBMIT |                       0000000010 |                             0001
+               HASH_WAIT |                       0000000100 |                             0010
+             MASK_SUBMIT |                       0000001000 |                             0011
+               MASK_WAIT |                       0000010000 |                             0100
+           STREAM_SUBMIT |                       0000100000 |                             0101
+             STREAM_WAIT |                       0001000000 |                             0110
+            GHASH_SUBMIT |                       0010000000 |                             0111
+              GHASH_WAIT |                       0100000000 |                             1000
+                  RESULT |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'aes128_gcm_encrypt_block'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+                WAIT_CMD |                              010 |                              010
+                    DATA |                              011 |                              011
+                DATA_ACK |                              100 |                              100
+                    STOP |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'i2c_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                REG_WAIT |                          0000001 |                              000
+                   START |                          0000010 |                              001
+                 ID_ADDR |                          0000100 |                              010
+               INTE_ADDR |                          0001000 |                              011
+                    READ |                          0010000 |                              100
+                   WRITE |                          0100000 |                              101
+                    STOP |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'sccb_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          KEY_WAIT_READY |                               00 |                               00
+               KEY_PULSE |                               01 |                               01
+          KEY_WAIT_VALID |                               10 |                               10
+              KEY_ACTIVE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'key_state_reg' using encoding 'sequential' in module 'basys3_secure_rack_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1399.969 ; gain = 315.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 11    
+	   2 Input   17 Bit       Adders := 2     
+	   2 Input   14 Bit       Adders := 12    
+	   2 Input   12 Bit       Adders := 4     
+	   2 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 7     
+	   4 Input    8 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 5     
+	   2 Input    6 Bit       Adders := 4     
+	   3 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 26    
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 33    
+	   3 Input     32 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 6     
+	   2 Input      8 Bit         XORs := 460   
+	   4 Input      8 Bit         XORs := 280   
+	   5 Input      8 Bit         XORs := 40    
+	  13 Input      8 Bit         XORs := 1     
++---Registers : 
+	             1408 Bit    Registers := 2     
+	              384 Bit    Registers := 4     
+	              128 Bit    Registers := 46    
+	               96 Bit    Registers := 3     
+	               40 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 10    
+	               14 Bit    Registers := 12    
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 8     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 46    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 86    
++---RAMs : 
+	            1200K Bit	(76800 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input 1408 Bit        Muxes := 6     
+	   2 Input  384 Bit        Muxes := 4     
+	   4 Input  384 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 38    
+	   7 Input  128 Bit        Muxes := 2     
+	   2 Input   96 Bit        Muxes := 1     
+	   2 Input   40 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   19 Bit        Muxes := 4     
+	   2 Input   18 Bit        Muxes := 4     
+	   2 Input   17 Bit        Muxes := 2     
+	   5 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   14 Bit        Muxes := 12    
+	   3 Input   12 Bit        Muxes := 6     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 8     
+	   8 Input   11 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 10    
+	   6 Input    8 Bit        Muxes := 2     
+	   7 Input    8 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 8     
+	   2 Input    6 Bit        Muxes := 11    
+	   4 Input    6 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 38    
+	   8 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 7     
+	   6 Input    3 Bit        Muxes := 2     
+	   6 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 26    
+	   5 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 97    
+	   5 Input    1 Bit        Muxes := 4     
+	  10 Input    1 Bit        Muxes := 12    
+	   7 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 28    
+	   4 Input    1 Bit        Muxes := 40    
+	   6 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'working_key_reg[127:0]' into 'working_key_reg[127:0]' [D:/260807_AIGIS_inseok/basys3project_inseok_jeong/rtl/aes_gcm/aes128_key_schedule.sv:19]
+INFO: [Synth 8-3886] merging instance 'working_key_reg[8]' (FDRE) to 'sbox_return0__14'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[9]' (FDRE) to 'sbox_return0__13'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[10]' (FDRE) to 'sbox_return0__12'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[11]' (FDRE) to 'sbox_return0__11'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[12]' (FDRE) to 'sbox_return0__10'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[13]' (FDRE) to 'sbox_return0__9'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[14]' (FDRE) to 'sbox_return0__8'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[15]' (FDRE) to 'sbox_return0__7'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[16]' (FDRE) to 'sbox_return0__22'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[17]' (FDRE) to 'sbox_return0__21'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[18]' (FDRE) to 'sbox_return0__20'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[19]' (FDRE) to 'sbox_return0__19'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[20]' (FDRE) to 'sbox_return0__18'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[21]' (FDRE) to 'sbox_return0__17'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[22]' (FDRE) to 'sbox_return0__16'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[23]' (FDRE) to 'sbox_return0__15'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[24]' (FDRE) to 'sbox_return0__6'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[25]' (FDRE) to 'sbox_return0__5'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[26]' (FDRE) to 'sbox_return0__4'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[27]' (FDRE) to 'sbox_return0__3'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[28]' (FDRE) to 'sbox_return0__2'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[29]' (FDRE) to 'sbox_return0__1'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[30]' (FDRE) to 'sbox_return0__0'
+INFO: [Synth 8-3886] merging instance 'working_key_reg[31]' (FDRE) to 'sbox_return0'
+WARNING: [Synth 8-7129] Port clk_100M in module Frame_Set is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module Frame_Set is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_pixel[0] in module Frame_Set is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y_pixel[9] in module Frame_Set is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y_pixel[0] in module Frame_Set is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module Drone_Classification_Color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x_pixel[0] in module CAM_Set is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y_pixel[0] in module CAM_Set is either unconnected or has no load
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[74] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[80] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[81] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[82] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[83] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[84] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[85] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[86] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[88] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[89] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[90] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[91] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[92] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[93] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[96] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[97] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[98] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[99] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[100] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[101] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[102] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[107] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[108] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[109] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[110] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[111] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[112] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[113] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[114] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[115] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[116] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[117] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[118] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[119] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[120] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[121] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[122] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[123] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[124] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[125] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_data_out_reg[127] )
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[74]' (FDCE) to 'status_snapshot_reg[75]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[75]' (FDCE) to 'status_snapshot_reg[76]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[76]' (FDCE) to 'status_snapshot_reg[77]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[77]' (FDCE) to 'status_snapshot_reg[78]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[78]' (FDCE) to 'status_snapshot_reg[79]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[79]' (FDCE) to 'status_snapshot_reg[80]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[80]' (FDCE) to 'status_snapshot_reg[81]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[81]' (FDCE) to 'status_snapshot_reg[82]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[82]' (FDCE) to 'status_snapshot_reg[83]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[83]' (FDCE) to 'status_snapshot_reg[84]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[84]' (FDCE) to 'status_snapshot_reg[85]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[85]' (FDCE) to 'status_snapshot_reg[86]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[86]' (FDCE) to 'status_snapshot_reg[87]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[87]' (FDCE) to 'status_snapshot_reg[88]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[88]' (FDCE) to 'status_snapshot_reg[89]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[89]' (FDCE) to 'status_snapshot_reg[90]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[90]' (FDCE) to 'status_snapshot_reg[91]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[91]' (FDCE) to 'status_snapshot_reg[92]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[92]' (FDCE) to 'status_snapshot_reg[93]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[93]' (FDCE) to 'status_snapshot_reg[94]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[94]' (FDCE) to 'status_snapshot_reg[95]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[95]' (FDCE) to 'status_snapshot_reg[96]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[96]' (FDCE) to 'status_snapshot_reg[97]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[97]' (FDCE) to 'status_snapshot_reg[98]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[98]' (FDCE) to 'status_snapshot_reg[99]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[99]' (FDCE) to 'status_snapshot_reg[100]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[100]' (FDCE) to 'status_snapshot_reg[101]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[101]' (FDCE) to 'status_snapshot_reg[102]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[102]' (FDCE) to 'status_snapshot_reg[103]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[103]' (FDCE) to 'status_snapshot_reg[104]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[104]' (FDCE) to 'status_snapshot_reg[105]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[105]' (FDCE) to 'status_snapshot_reg[106]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[106]' (FDCE) to 'status_snapshot_reg[107]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[107]' (FDCE) to 'status_snapshot_reg[108]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[108]' (FDCE) to 'status_snapshot_reg[109]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[109]' (FDCE) to 'status_snapshot_reg[110]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[110]' (FDCE) to 'status_snapshot_reg[111]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[111]' (FDCE) to 'status_snapshot_reg[112]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[112]' (FDCE) to 'status_snapshot_reg[113]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[113]' (FDCE) to 'status_snapshot_reg[114]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[114]' (FDCE) to 'status_snapshot_reg[115]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[115]' (FDCE) to 'status_snapshot_reg[116]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[116]' (FDCE) to 'status_snapshot_reg[117]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[117]' (FDCE) to 'status_snapshot_reg[118]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[118]' (FDCE) to 'status_snapshot_reg[119]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[119]' (FDCE) to 'status_snapshot_reg[120]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[120]' (FDCE) to 'status_snapshot_reg[121]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[121]' (FDCE) to 'status_snapshot_reg[122]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[122]' (FDCE) to 'status_snapshot_reg[123]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[123]' (FDCE) to 'status_snapshot_reg[124]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[124]' (FDCE) to 'status_snapshot_reg[125]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[125]' (FDCE) to 'status_snapshot_reg[126]'
+INFO: [Synth 8-3886] merging instance 'status_snapshot_reg[126]' (FDCE) to 'status_snapshot_reg[127]'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__32' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__42' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__37' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__36' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__31' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__0' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__10' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__5' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__4' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__33' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__1' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__34' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__2' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__35' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__3' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__38' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__6' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__39' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__7' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__40' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__8' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__14'
+INFO: [Synth 8-3886] merging instance 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__41' (FD) to 'U_CAM_SET/i_1/U_CAM_FRAMEBUFFER/mem_reg_mux_sel__46'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\status_snapshot_reg[127] )
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__15) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__16) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__17) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__18) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__19) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__20) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__21) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__22) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__23) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__24) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__25) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__26) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__27) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__28) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__29) is unused and will be removed from module CAM_Set.
+WARNING: [Synth 8-3332] Sequential element (U_CAM_FRAMEBUFFER/mem_reg_mux_sel__30) is unused and will be removed from module CAM_Set.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:27 . Memory (MB): peak = 1399.969 ; gain = 315.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------------+------------+---------------+----------------+
+|Module Name       | RTL Object | Depth x Width | Implemented As | 
++------------------+------------+---------------+----------------+
+|OV7670_Controller | p_0_out    | 128x16        | LUT            | 
++------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U_CAM_SET   | U_CAM_FRAMEBUFFER/mem_reg | 75 K x 16(NO_CHANGE)   | W |   | 75 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:33 . Memory (MB): peak = 1399.969 ; gain = 315.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:55 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U_CAM_SET   | U_CAM_FRAMEBUFFER/mem_reg | 75 K x 16(NO_CHANGE)   | W |   | 75 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_12__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_13__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_14__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_15__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:37 ; elapsed = 00:02:07 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_12__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_13__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_14__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_CAM_SET/U_CAM_FRAMEBUFFER/mem_reg_1_15__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:43 ; elapsed = 00:02:13 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:43 ; elapsed = 00:02:13 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:47 ; elapsed = 00:02:17 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:47 ; elapsed = 00:02:17 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:48 ; elapsed = 00:02:18 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:48 ; elapsed = 00:02:18 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     6|
+|2     |CARRY4     |   279|
+|3     |LUT1       |    60|
+|4     |LUT2       |  2457|
+|5     |LUT3       |  1604|
+|6     |LUT4       |  1911|
+|7     |LUT5       |  1711|
+|8     |LUT6       | 14198|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |  5209|
+|11    |MUXF8      |  2571|
+|12    |RAMB36E1   |    36|
+|15    |FDCE       |  2860|
+|16    |FDPE       |   106|
+|17    |FDRE       |  8307|
+|18    |FDSE       |     6|
+|19    |IBUF       |    17|
+|20    |IOBUF      |     4|
+|21    |OBUF       |    25|
+|22    |OBUFT      |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:48 ; elapsed = 00:02:18 . Memory (MB): peak = 1413.500 ; gain = 328.629
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:35 ; elapsed = 00:02:11 . Memory (MB): peak = 1413.500 ; gain = 56.504
+Synthesis Optimization Complete : Time (s): cpu = 00:01:49 ; elapsed = 00:02:19 . Memory (MB): peak = 1413.500 ; gain = 328.629
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.344 . Memory (MB): peak = 1413.500 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8100 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1413.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+329 Infos, 35 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:44 . Memory (MB): peak = 1413.500 ; gain = 328.629
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/synth_1/basys3_secure_rack_control.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1413.500 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file basys3_secure_rack_control_utilization_synth.rpt -pb basys3_secure_rack_control_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 11 11:26:29 2026...

@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../rtl/aes_gcm/aes128_encrypt_block.sv" \
+"../../../../../../rtl/aes_gcm/aes128_gcm_decrypt_block.sv" \
+"../../../../../../rtl/aes_gcm/aes128_gcm_decrypt_ip.sv" \
+"../../../../../../rtl/aes_gcm/aes128_gcm_encrypt_block.sv" \
+"../../../../../../rtl/aes_gcm/aes128_gcm_encrypt_ip.sv" \
+"../../../../../../rtl/aes_gcm/aes_pkg.sv" \
+"../../../../../../rtl/aes_gcm/aes128_key_schedule.sv" \
+"../../../../../../rtl/aes_gcm/aes128_pipelined_encrypt_core.sv" \
+"../../../../../../rtl/aes_gcm/aes_add_round_key.sv" \
+"../../../../../../rtl/aes_gcm/aes_encrypt_round.sv" \
+"../../../../../../rtl/secure/aes_gcm_decrypt_packet.sv" \
+"../../../../../../rtl/secure/aes_gcm_encrypt_packet.sv" \
+"../../../../../../rtl/aes_gcm/aes_gcm_ghash.sv" \
+"../../../../../../rtl/aes_gcm/aes_mix_columns.sv" \
+"../../../../../../rtl/aes_gcm/aes_shift_rows.sv" \
+"../../../../../../rtl/aes_gcm/aes_sub_bytes.sv" \
+"../../../../../../tb/tb_crypto_packet.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Aug 10 12:36:36 2026
+# Process ID: 49696
+# Current directory: D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3288 D:\260807_AIGIS_inseok\basys3project_inseok_jeong\vivado\basys3_secure_v2.xpr
+# Log file: D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/vivado.log
+# Journal file: D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 1107.164 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351B102DBA
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2499.051 ; gain = 1391.887
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210351B102DBA}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210351B102DBA
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210183BE0FCEA}
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183BE0FCEA
+set_property PROGRAM.FILE {D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/impl_1/basys3_secure_rack_control.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/260807_AIGIS_inseok/basys3project_inseok_jeong/vivado/basys3_secure_v2.runs/impl_1/basys3_secure_rack_control.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 18:53:58 2026...
