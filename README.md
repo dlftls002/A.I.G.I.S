@@ -52,60 +52,13 @@
 
 ### 4.1 System Block Diagram
 
-<img width="2885" height="1356" alt="image" src="https://github.com/user-attachments/assets/9dfaed4b-d98d-43b0-8df0-bc3e0c77be1b" />
-<img width="771" height="291" alt="AIGIS" src="https://github.com/user-attachments/assets/e0654899-09fb-472b-8c86-8788da403c7a" />
-
-
-<p align="center">
-  <img width="100%" alt="A.I.G.I.S System Block Diagram" src="assets/system_block_diagram.png" />
-</p>
-
-```mermaid
-graph TD
-    subgraph Central_Station ["중앙 관제 PC (Central Unit)"]
-        UI["3화면 통합 관제 UI (Python)"]
-        PyAES["AES-128-GCM 소프트웨어 코덱"]
-        CCTV_Server["C/C++ 고속 비디오 스트리밍 수신부"]
-    end
-
-    subgraph Security_Gateway ["보안 제어 게이트웨이 (ZYBO Z7-20)"]
-        RNG["하드웨어 PRNG 난수 생성기 (30s Rekey)"]
-        ZyboAES_Enc["AES-128-GCM 암호화 Core (RTL)"]
-        ZyboAES_Dec["AES-128-GCM 복호화 Core (RTL)"]
-        Router["보안 패킷 라우터 & 필터링 FSM"]
-    end
-
-    subgraph AI_FaceID_Node ["Face ID 출입 통제 (NVIDIA Jetson)"]
-        DualCAM["Stereo Dual CAM (Left/Right)"]
-        DepthExt["Depth Extractor & 3D 특징점 추출기"]
-        FaceModel["유사도 비교기 & Feature DB"]
-        DoorLock["중앙 출입문 PWM 서보 드라이버"]
-    end
-
-    subgraph Smart_Rack_Node ["서버 랙 & 환경 방재 (Basys 3 FPGA)"]
-        BasysAES_Dec["AES-128-GCM 복호화 Core (RTL)"]
-        RackServos["4-Channel Rack Door Servo FSM"]
-        FireServo["화재 방재 소화 서보 Controller"]
-        Sensors["DHT11 온습도 / OV7670 비전 센서 IP"]
-    end
-
-    UI <-->|"UART / 48-Byte AES-GCM Frame"| Router
-    Router <-->|"SPI / 10MHz Full-Duplex"| AI_FaceID_Node
-    Router <-->|"SPI / 100kHz Optimized"| BasysAES_Dec
-    DualCAM --> DepthExt --> FaceModel --> DoorLock
-    BasysAES_Dec --> RackServos
-    BasysAES_Dec --> FireServo
-    Sensors --> BasysAES_Dec
-```
+<img width="918" height="434" alt="녹음 2026-08-29 233200" src="https://github.com/user-attachments/assets/1ecd0228-2876-4683-88f3-c3e14f1a6923" />
 
 ---
 
 ### 4.2 Security Gateway Subsystem (ZYBO Z7-20)
 
-<!-- 📷 [이미지 2. ZYBO 보안 게이트웨이 내부 구조도 / 암복호화 파이프라인] -->
-<p align="center">
-  <img width="100%" alt="ZYBO Security Gateway Architecture" src="assets/zybo_gateway_arch.png" />
-</p>
+<img width="884" height="439" alt="녹음 2026-08-29 234315" src="https://github.com/user-attachments/assets/26f886d7-9956-4873-b7dd-9bdbdd867989" />
 
 * **하드웨어 PRNG 코어:** 30초 타이머 주기로 128-bit 물리 난수($R$) 생성 및 브로드캐스트
 * **보안 라우터 (`router.sv`):** 관제 PC(UART), Jetson(SPI), Basys 3(SPI) 간 패킷 중계 및 위조 패킷(TAG 불일치) 즉시 폐기
@@ -115,12 +68,10 @@ graph TD
 
 ### 4.3 Secure Rack Controller Subsystem (Basys 3)
 
-<!-- 📷 [이미지 3. Basys 3 랙 제어 및 방재 회로 블록 다이어그램] -->
-<p align="center">
-  <img width="100%" alt="Basys 3 Rack Control Architecture" src="assets/basys3_rack_arch.png" />
-</p>
+<img width="911" height="441" alt="녹음 2026-08-29 234816" src="https://github.com/user-attachments/assets/b95b7506-c655-4a2a-9307-1640792f50d0" />
 
-* **4채널 랙 서보 제어:** 권한 인가 패킷에 따라 타겟 랙(1~4번) 도어 PWM 서보 구동 (0.45초 도어 개폐 애니메이션 동기화)
+
+* **4채널 랙 서보 제어:** 권한 인가 패킷에 따라 타겟 랙(1~4번) 도어 PWM 서보 구동
 * **스마트 방재 FSM:** DHT11 온습도 임계치 초과 또는 화재 감지 시 소화 서보 90도 회전 및 관제 비상 알림
 * **OV7670 비전 모니터링:** 랙 전면 카메라 영상을 통한 이상 징후 실시간 감출
 
@@ -128,10 +79,7 @@ graph TD
 
 ### 4.4 Face ID System (NVIDIA Jetson)
 
-<!-- 📷 [이미지 4. Face ID 3D Depth 추출 및 매칭 구조도] -->
-<p align="center">
-  <img width="100%" alt="Face ID 3D Pipeline" src="assets/faceid_pipeline.png" />
-</p>
+<img width="920" height="440" alt="녹음 2026-08-29 235239" src="https://github.com/user-attachments/assets/bcc4ea46-9ae2-4f9d-a6bd-49548d30e47a" />
 
 * **Stereo 3D Depth Pipeline:** Dual CAM 시차(Disparity) 기반 3D 안면 윤곽 특징점 추출
 * **유사도 매칭 & 출입문 제어:** Feature DB 비교를 통해 인가자 확인 시 중앙 출입문 잠금 해제
@@ -140,43 +88,80 @@ graph TD
 
 ### 4.5 Central Control Station UI (Python)
 
-<!-- 📷 [이미지 5. 3화면 통합 관제 UI 화면 모음] -->
-<p align="center">
-  <img width="100%" alt="Central Control UI 3-View" src="assets/ui_3view_preview.png" />
-</p>
+<img width="3838" height="2160" alt="스크린샷 2026-08-30 000503" src="https://github.com/user-attachments/assets/0354a810-a77b-46a4-a2e7-2c4acaece9f8" />
 
 1. **메인 관제 화면:** 정상(CH-A) vs 오류 마스터키(CH-B) 영상 비교 스트림 & Face ID 인가 팝업
+
+<img width="3838" height="2160" alt="스크린샷 2026-08-30 000649" src="https://github.com/user-attachments/assets/0817289c-ff82-4209-b70f-15ad71010280" />
+
 2. **랙 제어 & 암호 파이프라인:** 랙 1~4번 제어, 실시간 $K_{master} \oplus R = K_{session}$ 연산 및 데이터 흐름 시각화
+
+<img width="3838" height="2160" alt="Video Project 26" src="https://github.com/user-attachments/assets/b5cd7246-8856-4ea4-9a2a-2adb58b9d26b" />
+
 3. **사용자 등록 화면:** 3D 윤곽 데이터 생성, 사용자 정보 및 랙 2×2 권한 할당
 
 ---
 
-## 5. Security & Communication Protocol
+## 5. AES-128-GCM 하드웨어 암호화 원리 및 프로토콜
 
-### 5.1 48-Byte 고정 프레임 구조 (AES-128-GCM)
+### 5.1 AES-128 암호화 4단계 하드웨어 연산 원리
 
-<!-- 📷 [이미지 6. 48-Byte 보안 패킷 구조도] -->
-<p align="center">
-  <img width="100%" alt="48-Byte Packet Format" src="assets/secure_packet_format.png" />
-</p>
+AES-128은 128비트(16바이트) 블록을 $4 \times 4$ 바이트 행렬(State)로 배치한 후, **4가지 핵심 변환 과정을 10 라운드(Round 1~10)** 반복하여 암호화합니다.
+
+<img width="3838" height="2160" alt="encryption" src="https://github.com/user-attachments/assets/6ee75273-473b-4cf3-8d4e-4eee69d1b478" />
+
+| 연산 단계 | 명칭 | 하드웨어 동작 및 암호학적 역할 |
+| :---: | :--- | :--- |
+| **1단계** | **SubBytes** (바이트 치환) | 비선형 치환표(S-Box)를 참조하여 16개 바이트를 독립적으로 1:1 대체 (**혼돈/Confusion** 달성) |
+| **2단계** | **ShiftRows** (행 단위 순환 이동) | 1행은 유지, 2행은 1칸, 3행은 2칸, 4행은 3칸씩 좌측 순환 시프트 (**위치 섞기/Diffusion**) |
+| **3단계** | **MixColumns** (열 단위 행렬 연산) | 갈루아 필드 $\text{GF}(2^8)$ 상에서 $4 \times 4$ 다항식 행렬 곱셈을 수행하여 열 전체 바이트를 믹싱 (**확산/Diffusion**) |
+| **4단계** | **AddRoundKey** (라운드 키 결합) | Key Expansion으로 생성된 128-bit 라운드 키와 State 행렬을 비트 단위 **XOR ($\oplus$)** 결합 |
+
+> 💡 **라운드 구성:** Initial Round(AddRoundKey) $\rightarrow$ Round 0~9(SubBytes $\rightarrow$ ShiftRows $\rightarrow$ MixColumns $\rightarrow$ AddRoundKey 4단계 전수 수행) $\rightarrow$ Final Round 10(MixColumns를 제외한 3단계 수행 후 최종 암호 블록 출력).
+
+---
+
+### 5.2 AES-GCM (Galois/Counter Mode) 인증 암호화 원리
+
+본 프로젝트는 암호화와 무결성 인증을 단일 하드웨어 엔진에서 동시에 수행하는 **AES-GCM (AEAD)** 방식을 채택했습니다.
+<img width="3838" height="2160" alt="AIGIS_enc_mini" src="https://github.com/user-attachments/assets/74e8d4d1-6bc1-40fe-b9d2-e4fc8dd0ce86" />
+
+
+#### 💡 GCM 3단계 암·복호화 동작 원리
+1. **Keystream 생성 (CTR Mode):** AES 엔진이 `Key + IV + Counter`를 암호화하여 일회용 난수열(**Keystream**)을 생성
+2. **초고속 XOR 암·복호화:** 평문과 난수열을 단순 비트 XOR 연산하여 암호문을 생성하며, 복호화 시에도 동일 난수열을 암호문과 XOR하여 1 사이클 만에 원본 평문 복원
+   $$\text{Ciphertext} = \text{Plaintext} \oplus \text{Keystream} \quad \Longleftrightarrow \quad \text{Plaintext} = \text{Ciphertext} \oplus \text{Keystream}$$
+3. **GHASH 무결성 검증 & 자동 소거 (Zeroization):** 갈루아 필드 $\text{GF}(2^{128})$ 상에서 암호문 기반 **128-bit Auth Tag**를 산출하여 수신 태그와 대조
+   * **Tag 일치 (`auth_valid = 1`):** 정상 승인 후 제어 모듈로 평문 전달
+   * **Tag 불일치 (`auth_valid = 0`):** 위·변조 감지 즉시 평문 데이터를 **`128'b0`으로 자동 소거(Zeroization)** 및 패킷 폐기
+
+---
+
+### 5.3 48-Byte 고정 프레임 구조
 
 | 바이트 위치 | 필드명 | 크기 | 암호화 | 기능 설명 |
 | :---: | :---: | :---: | :---: | :--- |
 | **0 ~ 1** | **MAGIC** | 2 Byte | 평문 | 고정 프레임 식별 헤더 (`0xA5 0x5A`) |
 | **2** | **TYPE** | 1 Byte | 평문 | 패킷 타입 (`0x01` 제어, `0x06` 상태, `0x31..0x37` 키 교환) |
 | **3** | **LENGTH** | 1 Byte | 평문 | Payload 길이 (`0x10`, 고정 16 Byte) |
-| **4 ~ 15** | **IV (Nonce)** | 12 Byte | 평문 | 96-bit 고유 Initialization Vector |
+| **4 ~ 15** | **IV (Nonce)** | 12 Byte | 평문 | 96-bit 고유 Initialization Vector (패킷마다 난수 생성) |
 | **16 ~ 31** | **Payload** | 16 Byte | 🔒 **암호문** | 128-bit AES-GCM 암호화된 제어 명령 / 센서 데이터 |
-| **32 ~ 47** | **GCM TAG** | 16 Byte | 평문 (검증) | 128-bit GHASH 무결성 및 인증 태그 |
+| **32 ~ 47** | **GCM TAG** | 16 Byte | 평문 (검증) | 128-bit GHASH 무결성 및 출처 인증 태그 |
 
-### 5.2 동적 세션키 생성 및 무손실 Rekeying
+---
+
+### 5.4 동적 세션키 생성 및 무손실 Rekeying
 
 $$K_{session} = K_{master} \oplus R \quad (\text{단, } R \text{은 ZYBO 하드웨어 PRNG에서 30초마다 갱신되는 128-bit 난수})$$
 
-<!-- 📷 [이미지 7. 30초 주기 동적 Rekeying 및 Handshake 흐름도] -->
+<!-- 📷 [이미지 9. 30초 주기 동적 Rekeying 및 Handshake 흐름도] -->
 <p align="center">
   <img width="100%" alt="Rekeying Flow Diagram" src="assets/rekeying_flow.png" />
 </p>
+
+1. **난수 생성 및 전파:** ZYBO 보안 게이트웨이가 30초마다 새로운 난수 $R$을 생성하여 각 노드로 전송 (`0x32` 관리 프레임)
+2. **세션키 연산:** 마스터키($K_{master}$)와 $R$을 XOR 연산하여 노드 간 암호화 키 동기화
+3. **무손실 스위칭:** 암·복호화 진행 중에는 `KEY HOLD`를 유지하고 처리가 완료된 후 새 키를 적용하여 **패킷 드롭 방지**
 
 ---
 
