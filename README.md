@@ -154,10 +154,7 @@ AES-128은 128비트(16바이트) 블록을 $4 \times 4$ 바이트 행렬(State)
 
 $$K_{session} = K_{master} \oplus R \quad (\text{단, } R \text{은 ZYBO 하드웨어 PRNG에서 30초마다 갱신되는 128-bit 난수})$$
 
-<!-- 📷 [이미지 9. 30초 주기 동적 Rekeying 및 Handshake 흐름도] -->
-<p align="center">
-  <img width="100%" alt="Rekeying Flow Diagram" src="assets/rekeying_flow.png" />
-</p>
+<img width="3838" height="2160" alt="Video Project 27" src="https://github.com/user-attachments/assets/a29f2542-0ced-4c03-bdad-5e522f98ccae" />
 
 1. **난수 생성 및 전파:** ZYBO 보안 게이트웨이가 30초마다 새로운 난수 $R$을 생성하여 각 노드로 전송 (`0x32` 관리 프레임)
 2. **세션키 연산:** 마스터키($K_{master}$)와 $R$을 XOR 연산하여 노드 간 암호화 키 동기화
@@ -167,10 +164,7 @@ $$K_{session} = K_{master} \oplus R \quad (\text{단, } R \text{은 ZYBO 하드�
 
 ## 6. UVM Verification (하드웨어 검증)
 
-<!-- 📷 [이미지 8. UVM 검증 환경 구조도 및 시뮬레이션 파형] -->
-<p align="center">
-  <img width="100%" alt="UVM Verification Architecture and Waveform" src="assets/uvm_verification_waveform.png" />
-</p>
+<img width="2789" height="1327" alt="image" src="https://github.com/user-attachments/assets/de4f6655-ec70-4c3e-a41a-26936de8b03b" />
 
 * **30초 난수 변경 & `KEY HOLD` 검증:** 암·복호화 진행 중 난수 변경 시 `KEY HOLD`를 유지하고, 연산 완료 후 `Handshake Valid` 신호로 안전하게 세션키 스위칭
 * **Constrained Random Verification:** 1,000회 이상 무작위 패킷 및 변조된 TAG/비트 반전 주입 시험 $\rightarrow$ 정상 복호화 일치율 100% 및 위조 패킷 즉각 폐기 검증
@@ -179,12 +173,10 @@ $$K_{session} = K_{master} \oplus R \quad (\text{단, } R \text{은 ZYBO 하드�
 
 ## 7. Troubleshooting & Optimization
 
-<!-- 📷 [이미지 9. 트러블슈팅 전/후 성능 비교 그래프] -->
-<p align="center">
-  <img width="100%" alt="Troubleshooting Comparison Graphs" src="assets/troubleshooting_graph.png" />
-</p>
-
 ### 7.1 CCTV 영상 스트리밍 C/C++ 드라이버 최적화
+
+<img width="2789" height="1327" alt="Video Project 28" src="https://github.com/user-attachments/assets/f83c2523-bc72-4ab9-8ac6-2d6252fdceb6" />
+
 * **문제:** Python 직접 접근 방식으로 인한 심각한 프레임 저하(3 FPS) 및 지연 시간(300 ms)
 * **해결:** C/C++ 기반 병렬 소켓 데이터 스트리밍 드라이버 구현
 
@@ -254,7 +246,3 @@ python app.py --port COM10
 2. **Basys 3:** `basys3project_inseok_jeong/basys3_secure_rack_control.bit` 다운로드
 
 ---
-
-## 10. License
-본 프로젝트는 교육 및 연구 목적으로 제작되었습니다.  
-자세한 내용은 [LICENSE](LICENSE) 파일을 참고하세요.
